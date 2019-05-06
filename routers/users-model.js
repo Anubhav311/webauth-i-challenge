@@ -4,8 +4,8 @@ module.exports = {
     find,
     findById,
     add,
+    findBy,
 };
-
   
 function find() {
     return db('users');
@@ -25,3 +25,13 @@ function add(dish) {
         });
 }
 
+// function find() {
+//     return db('users').select('id', 'username', 'password');
+// }
+  
+function findBy(filter) {
+    return db('users').where(filter);
+}
+  
+
+  
